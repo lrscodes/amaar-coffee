@@ -89,7 +89,7 @@ export default async function Home() {
               <p className="text-gray-600 mb-6 leading-relaxed">
                 At Amaar Coffee, we believe that great coffee brings people together. Our expert baristas 
                 carefully craft each cup using premium, ethically-sourced beans roasted to perfection. 
-                Whether you're starting your day, meeting friends, or finding a quiet moment to work, 
+                Whether you&apos;re starting your day, meeting friends, or finding a quiet moment to work, 
                 our warm and inviting atmosphere makes every visit special.
               </p>
               <div className="flex items-center space-x-4 mb-4">
@@ -165,7 +165,7 @@ export default async function Home() {
             <div className="bg-gray-800 rounded-lg p-8">
               <h3 className="text-xl font-semibold mb-4">Get Directions</h3>
               <p className="text-gray-300 mb-6">
-                Located in the heart of downtown, we're easily accessible by car or public transport. 
+                Located in the heart of downtown, we&apos;re easily accessible by car or public transport. 
                 Street parking and nearby parking garages available.
               </p>
               <a 

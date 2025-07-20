@@ -44,7 +44,7 @@ export default function ReviewsSection({ reviews, rating, totalReviews }: Review
                                     {new Date(review.date).toLocaleDateString()}
                                 </span>
                             </div>
-                            <p className="text-gray-700 mb-3 italic">"{review.text}"</p>
+                            <p className="text-gray-700 mb-3 italic">&ldquo;{review.text}&rdquo;</p>
                             <p className="text-sm font-semibold text-gray-800">- {review.author}</p>
                         </div>
                     ))}
