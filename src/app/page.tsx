@@ -18,7 +18,7 @@ export default async function Home() {
       <section className="relative h-screen flex items-center justify-center">
         <div className="absolute inset-0">
           <Image
-            src="/images/hero-page-1.jpeg"
+            src="/images/hero.webp"
             alt="Amaar Coffee - Hero Background"
             fill
             className="object-cover"
@@ -29,7 +29,7 @@ export default async function Home() {
         <div className="relative z-10 flex flex-col items-center justify-center text-center text-white px-4 py-6 h-full min-h-screen">
           {/* Logo - Responsive sizing */}
           <div className="flex-shrink-0 mb-4 sm:mb-6">
-            <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 xl:w-64 xl:h-64 mx-auto relative">
+            <div className="w-56 h-56 sm:w-72 sm:h-72 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] mx-auto relative">
               <Image
                 src="/images/logo-round.png"
                 alt="Amaar Coffee Logo"
@@ -222,19 +222,22 @@ export default async function Home() {
                   icon: '📍',
                   title: 'Address',
                   content: cafeInfo.address,
-                  action: 'Get Directions'
+                  action: 'Get Directions',
+                  link: 'https://www.google.com/maps/place/Amaar+Coffee/@51.6151654,-0.0639887,17z/data=!3m1!4b1!4m6!3m5!1s0x48761fa2d7faa38b:0x8a0f1cb69be92f95!8m2!3d51.6151654!4d-0.0639887!16s%2Fg%2F11sd7p6w3s?entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D'
                 },
                 {
                   icon: '📞',
                   title: 'Phone',
                   content: cafeInfo.phone,
-                  action: 'Call Now'
+                  action: 'Call Now',
+                  link: `tel:${cafeInfo.phone}`
                 },
                 {
                   icon: '🕒',
                   title: 'Opening Hours',
                   content: cafeInfo.hours,
-                  action: null
+                  action: null,
+                  link: null
                 }
               ].map((item, index) => (
                 <div key={index} className="group">
@@ -248,10 +251,15 @@ export default async function Home() {
                       <div className="flex-1 min-w-0">
                         <h3 className="text-base sm:text-lg font-semibold text-white mb-2">{item.title}</h3>
                         <p className="text-sm sm:text-base text-gray-300 leading-relaxed mb-3">{item.content}</p>
-                        {item.action && (
-                          <button className="text-xs sm:text-sm text-amber-400 hover:text-amber-300 font-medium transition-colors duration-300">
+                        {item.action && item.link && (
+                          <a 
+                            href={item.link}
+                            target={item.title === 'Address' ? '_blank' : undefined}
+                            rel={item.title === 'Address' ? 'noopener noreferrer' : undefined}
+                            className="text-xs sm:text-sm text-amber-400 hover:text-amber-300 font-medium transition-colors duration-300 inline-block"
+                          >
                             {item.action} →
-                          </button>
+                          </a>
                         )}
                       </div>
                     </div>

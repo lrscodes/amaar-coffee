@@ -6,7 +6,7 @@ export async function getCafeInfo(): Promise<CafeInfo> {
   return {
     name: "Amaar Coffee",
     address: "391 Fore Street, Upper Edmonton, London N9 0NR",
-    phone: "020 8807 7333",
+    phone: "020 3929 7663",
     hours: "Monday - Sunday: 6:00 AM - 10:00 PM",
     rating: 4.8,
     totalReviews: 247,

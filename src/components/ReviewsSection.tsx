@@ -28,14 +28,14 @@ export default function ReviewsSection({ reviews, rating, totalReviews }: Review
                 <div className="absolute top-10 left-10 w-32 h-32 bg-amber-300 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-10 right-10 w-40 h-40 bg-amber-400 rounded-full blur-3xl"></div>
             </div>
-            
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
                 {/* Header */}
                 <div className="text-center mb-8 sm:mb-12 lg:mb-16">
                     <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6 text-gray-900">
                         What Our <span className="text-amber-700">Customers</span> Say
                     </h2>
-                    
+
                     {/* Overall Rating */}
                     <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 bg-white/80 backdrop-blur-sm rounded-2xl px-6 sm:px-8 py-4 sm:py-5 shadow-lg border border-amber-100/50">
                         <div className="flex items-center space-x-2">
@@ -56,8 +56,8 @@ export default function ReviewsSection({ reviews, rating, totalReviews }: Review
                 <div className="mb-8 sm:mb-12">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                         {displayedReviews.map((review, index) => (
-                            <div 
-                                key={review.id} 
+                            <div
+                                key={review.id}
                                 className="group bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-lg hover:shadow-xl border border-amber-100/50 hover:border-amber-200/50 transition-all duration-500 transform hover:scale-[1.02]"
                                 style={{
                                     animationDelay: `${index * 150}ms`,
@@ -79,12 +79,12 @@ export default function ReviewsSection({ reviews, rating, totalReviews }: Review
                                         })}
                                     </span>
                                 </div>
-                                
+
                                 {/* Review Text */}
                                 <blockquote className="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 italic">
                                     &ldquo;{review.text}&rdquo;
                                 </blockquote>
-                                
+
                                 {/* Author */}
                                 <div className="flex items-center space-x-3">
                                     <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center text-white font-bold text-sm sm:text-base">
@@ -99,7 +99,7 @@ export default function ReviewsSection({ reviews, rating, totalReviews }: Review
                                         </p>
                                     </div>
                                 </div>
-                                
+
                                 {/* Hover decoration */}
                                 <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                     <div className="w-2 h-2 bg-amber-400 rounded-full"></div>
